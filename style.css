@@ -1,0 +1,222 @@
+@font-face {
+  font-family: 'Super Mario Bros.';
+  src: url('https://www.fontsaddict.com/fontface/super-mario-bros.ttf');
+}
+
+#html {
+    margin: auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* style.css */
+
+/* --- Gaya untuk Nav Top Bar (Merah dengan Logo Nintendo) --- */
+.nav-top-bar {
+    height: 40px;
+    background-color: red;
+    display: flex; /* Tambahkan flexbox untuk centering */
+    align-items: center; /* Pusatkan item secara vertikal */
+    justify-content: center; /* Pusatkan item secara horizontal */
+}
+
+.nintendo-logo {
+    height: 40px; /* Sesuaikan tinggi logo */
+    /* Remove max-height / max-width if already set globally for img */
+}
+
+/* --- Gaya untuk Nav Utama (Gambar Latar Belakang) --- */
+.nav-main {
+    height: 60px;
+    /* Pastikan path gambar benar. Perhatikan '\' yang perlu diubah jadi '/' */
+    background-image: url('img/img 2.jpg');
+    background-size: cover; /* Pastikan gambar menutupi seluruh area */
+    background-position: center; /* Pusatkan gambar */
+    display: flex; /* Untuk memposisikan link */
+    align-items: center; /* Pusatkan link secara vertikal */
+    justify-content: center; /* Pusatkan link secara horizontal */
+}
+
+/* --- Gaya untuk Nav Links (Teks Putih dan Animasi Hover) --- */
+.nav-main .nav-link.nav-text { /* Targetkan link di dalam nav-main dengan kelas nav-text */
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 0 10px; /* Gunakan margin kiri-kanan saja */
+    color: white; /* Pastikan warna teks putih */
+
+    /* --- INI BAGIAN UTAMA UNTUK ANIMASI HOVER --- */
+    transition: color 0.3s ease, transform 0.3s ease; /* Animasi perubahan warna dan posisi */
+}
+
+.nav-main .nav-link.nav-text:hover {
+    color: red; /* Contoh: Ubah warna teks menjadi kuning saat di-hover */
+    transform: translateY(-3px); /* Contoh: Sedikit mengangkat teks ke atas */
+    text-shadow: 0 0 5px red; /* Contoh: Tambahkan sedikit bayangan */
+}
+
+/* Tambahan: Pastikan teks di dalam Hero Banner juga terlihat di dark mode */
+.hero-text { /* Asumsi Anda memberi kelas ini ke div teks di banner */
+    color: white; /* Agar teks di atas gambar latar belakang terlihat */
+}
+
+
+/* From Uiverse.io by doniaskima */ 
+.btn-12,
+.btn-12 *,
+.btn-12 :after,
+.btn-12 :before,
+.btn-12:after,
+.btn-12:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-12 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: red;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(red, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.btn-12:disabled {
+  cursor: default;
+}
+
+.btn-12:-moz-focusring {
+  outline: auto;
+}
+
+.btn-12 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-12 [hidden] {
+  display: none;
+}
+
+.btn-12 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+
+.btn-12 span {
+  mix-blend-mode: difference;
+}
+
+.btn-12:after,
+.btn-12:before {
+  background: linear-gradient(
+    90deg,
+    #fff 25%,
+    transparent 0,
+    transparent 50%,
+    #fff 0,
+    #fff 75%,
+    transparent 0
+  );
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: translateY(var(--progress, 100%));
+  transition: transform 0.2s ease;
+}
+
+.btn-12:after {
+  --progress: -100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 25%,
+    #fff 0,
+    #fff 50%,
+    transparent 0,
+    transparent 75%,
+    #fff 0
+  );
+  z-index: -1;
+}
+
+.btn-12:hover:after,
+.btn-12:hover:before {
+  --progress: 0;
+}
+
+/* From Uiverse.io by Yaya12085 */ 
+
+.form {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
+}
+
+.form .title {
+  color: royalblue;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form input {
+  outline: 0;
+  border: 1px solid rgb(219, 213, 213);
+  padding: 8px 14px;
+  border-radius: 8px;
+  width: 100%;
+  height: 50px;
+}
+
+.form textarea {
+  border-radius: 8px;
+  height: 100px;
+  width: 100%;
+  resize: none;
+  outline: 0;
+  padding: 8px 14px;
+  border: 1px solid rgb(219, 213, 213);
+}
+
+.form button {
+  align-self: flex-end;
+  padding: 8px;
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: royalblue;
+  color: #fff;
+  cursor: pointer;
+}
+    
